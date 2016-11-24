@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ConverterTest {
+public class RomanNumeralConverterTest {
 
     @Test
     public void testGivenIReturns1(){
