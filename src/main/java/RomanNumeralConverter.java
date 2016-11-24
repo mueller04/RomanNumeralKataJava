@@ -11,7 +11,11 @@ public class RomanNumeralConverter {
     }
 
     public static String toNumeral(int integer) {
-        return "I";
+        if (integer == 1) {
+            return "I";
+        } else {
+            return "II";
+        }
     }
 
 

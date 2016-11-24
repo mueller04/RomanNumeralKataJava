@@ -13,7 +13,9 @@ public class ConvertIntToNumeralTest {
         assertEquals("I", result);
     }
 
-
-
-
+    @Test
+    public void testGiven2ReturnsII(){
+        String result = RomanNumeralConverter.toNumeral(2);
+        assertEquals("II", result);
+    }
 }
