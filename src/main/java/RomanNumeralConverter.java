@@ -10,4 +10,9 @@ public class RomanNumeralConverter {
         }
     }
 
+    public static String toNumeral(int integer) {
+        return "I";
+    }
+
+
 }
