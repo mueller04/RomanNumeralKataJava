@@ -10,7 +10,7 @@ public class AdditionTest {
     Calculator calculator = new Calculator();
 
     @Test
-    public void testIplusIequalsII(){
+    public void testIPlusIEqualsII(){
         String result = calculator.add("I", "I");
         assertEquals("II", result);
     }
