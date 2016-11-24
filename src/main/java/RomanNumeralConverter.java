@@ -1,21 +1,24 @@
 package main.java;
 
+import java.util.Map;
+
 public class RomanNumeralConverter {
 
-    public static int toInt(String numeral) {
-        if (numeral == "I") {
-            return 1;
-        } else {
-            return 2;
-        }
+    private Map<Integer, String> integerToNumeralMap;
+    private Map<String, Integer> numeralToIntegerMap;
+
+
+    public RomanNumeralConverter(RomanNumerals romanNumerals) {
+        integerToNumeralMap = romanNumerals.getIntToNumeralMap();
+        numeralToIntegerMap = romanNumerals.getNumeralToIntMap();
     }
 
-    public static String toNumeral(int integer) {
-        if (integer == 1) {
-            return "I";
-        } else {
-            return "II";
-        }
+    public int toInt(String numeral) {
+        return numeralToIntegerMap.get(numeral);
+    }
+
+    public String toNumeral(int integer) {
+        return integerToNumeralMap.get(integer);
     }
 
 

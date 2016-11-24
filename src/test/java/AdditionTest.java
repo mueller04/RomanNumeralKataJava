@@ -1,13 +1,17 @@
 package test.java;
 
 import main.java.Calculator;
+import main.java.RomanNumeralConverter;
+import main.java.RomanNumerals;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class AdditionTest {
 
-    Calculator calculator = new Calculator();
+    RomanNumerals romanNumerals = new RomanNumerals();
+    RomanNumeralConverter romanNumeralConverter = new RomanNumeralConverter(romanNumerals);
+    Calculator calculator = new Calculator(romanNumeralConverter);
 
     @Test
     public void testIPlusIEqualsII(){
