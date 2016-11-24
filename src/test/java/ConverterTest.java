@@ -13,5 +13,11 @@ public class ConverterTest {
         assertEquals(1, result);
     }
 
+    @Test
+    public void testGivenIIReturns2(){
+        int result = RomanNumeralConverter.toInt("II");
+        assertEquals(2, result);
+    }
+
 
 }

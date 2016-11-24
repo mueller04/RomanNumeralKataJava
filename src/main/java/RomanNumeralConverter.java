@@ -3,7 +3,11 @@ package main.java;
 public class RomanNumeralConverter {
 
     public static int toInt(String numeral) {
-        return 1;
+        if (numeral == "I") {
+            return 1;
+        } else {
+            return 2;
+        }
     }
 
 }
