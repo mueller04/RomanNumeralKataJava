@@ -29,5 +29,11 @@ public class ConvertNumeralToIntTest {
         assertEquals(3, result);
     }
 
+    @Test
+    public void testGivenVReturns5(){
+        int result = underTest.toInt("V");
+        assertEquals(5, result);
+    }
+
 
 }
