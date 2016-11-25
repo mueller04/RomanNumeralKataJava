@@ -23,5 +23,11 @@ public class ConvertNumeralToIntTest {
         assertEquals(2, result);
     }
 
+    @Test
+    public void testGivenIIIReturns3(){
+        int result = underTest.toInt("III");
+        assertEquals(3, result);
+    }
+
 
 }
