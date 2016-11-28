@@ -101,5 +101,23 @@ public class ConvertNumeralToIntTest {
         assertEquals(90, result);
     }
 
+    @Test
+    public void testGivenCReturns100(){
+        int result = underTest.toInt("C");
+        assertEquals(100, result);
+    }
+
+    @Test
+    public void testGivenCLReturns150(){
+        int result = underTest.toInt("CL");
+        assertEquals(150, result);
+    }
+
+    @Test
+    public void testGivenCDReturns400(){
+        int result = underTest.toInt("CD");
+        assertEquals(400, result);
+    }
+
 
 }

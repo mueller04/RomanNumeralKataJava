@@ -21,6 +21,7 @@ public class RomanNumerals {
         numeralToIntMap.put("X", 10);
         numeralToIntMap.put("L", 50);
         numeralToIntMap.put("C", 100);
+        numeralToIntMap.put("D", 500);
     }
 
     public HashMap<Integer, String> getIntToNumeralMap() {
