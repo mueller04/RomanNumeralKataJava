@@ -22,4 +22,10 @@ public class ConvertIntToNumeralTest {
         String result = underTest.toNumeral(2);
         assertEquals("II", result);
     }
+
+    @Test
+    public void testGiven3ReturnsIII(){
+        String result = underTest.toNumeral(3);
+        assertEquals("III", result);
+    }
 }

@@ -30,7 +30,15 @@ public class RomanNumeralConverter {
     }
 
     public String toNumeral(int integer) {
-        return integerToNumeralMap.get(integer);
+        StringBuilder numeral = new StringBuilder();
+
+        while (integer > 0) {
+            if (integer >= 1){
+                numeral.append(integerToNumeralMap.get(1));
+                integer -= 1;
+            }
+        }
+        return numeral.toString();
     }
 
 
