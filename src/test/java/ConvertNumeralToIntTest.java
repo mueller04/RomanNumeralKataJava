@@ -65,5 +65,29 @@ public class ConvertNumeralToIntTest {
         assertEquals(9, result);
     }
 
+    @Test
+    public void testGivenXReturns10(){
+        int result = underTest.toInt("X");
+        assertEquals(10, result);
+    }
+
+    @Test
+    public void testGivenXIReturns11(){
+        int result = underTest.toInt("XI");
+        assertEquals(11, result);
+    }
+
+    @Test
+    public void testGivenXXIReturns21(){
+        int result = underTest.toInt("XXI");
+        assertEquals(21, result);
+    }
+
+    @Test
+    public void testGivenXLReturns40(){
+        int result = underTest.toInt("XL");
+        assertEquals(40, result);
+    }
+
 
 }
