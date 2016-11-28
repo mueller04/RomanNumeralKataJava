@@ -131,5 +131,28 @@ public class ConvertNumeralToIntTest {
         assertEquals(900, result);
     }
 
+    @Test
+    public void testGivenMeturns1000(){
+        int result = underTest.toInt("M");
+        assertEquals(1000, result);
+    }
+
+    @Test
+    public void testGivenMCMXCIXeturns1999(){
+        int result = underTest.toInt("MCMXCIX");
+        assertEquals(1999, result);
+    }
+
+    @Test
+    public void testGivenMMCDXXXeturns2420(){
+        int result = underTest.toInt("MMCDXX");
+        assertEquals(2420, result);
+    }
+
+    @Test
+    public void testGivenMMMCMXCIXeturns3999(){
+        int result = underTest.toInt("MMMCMXCIX");
+        assertEquals(3999, result);
+    }
 
 }
