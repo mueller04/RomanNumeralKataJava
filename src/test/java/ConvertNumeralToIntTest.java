@@ -119,5 +119,17 @@ public class ConvertNumeralToIntTest {
         assertEquals(400, result);
     }
 
+    @Test
+    public void testGivenDReturns500(){
+        int result = underTest.toInt("D");
+        assertEquals(500, result);
+    }
+
+    @Test
+    public void testGivenCMeturns900(){
+        int result = underTest.toInt("CM");
+        assertEquals(900, result);
+    }
+
 
 }
