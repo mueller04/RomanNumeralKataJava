@@ -20,7 +20,14 @@ public class RomanNumeralConverter {
         int previousInt = 0;
 
         for (int i=0; i < numeralArray.length; i++ ){
-            int currentInt = numeralToIntegerMap.get(numeralArray[i]);
+
+            int currentInt;
+            try {
+            currentInt = numeralToIntegerMap.get(numeralArray[i]);
+            } catch (NullPointerException e) {
+                throw new IllegalArgumentException("toInt(numeral) Invalid Numeral: " + numeralArray[i]);
+            }
+
             result += currentInt;
             if (currentInt > previousInt) {
                 result -= (previousInt * 2);

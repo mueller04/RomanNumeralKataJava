@@ -168,4 +168,12 @@ public class ConvertNumeralToIntTest {
 
         underTest.toInt("MMMM");
     }
+
+    @Test
+    public void testGivenYThrowsException(){
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage("toInt(numeral) Invalid Numeral: Y");
+
+        underTest.toInt("Y");
+    }
 }
