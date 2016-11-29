@@ -36,10 +36,12 @@ public class RomanNumeralConverter {
         while (integer > 0) {
 
             for (Map.Entry<Integer, String> entry : integerToNumeralMap.entrySet()) {
-                if (integer >= entry.getKey()) {
+                int currentEntryInt = entry.getKey();
+                
+                if (integer >= currentEntryInt) {
                     String numeralToAppend = entry.getValue();
                     numeral.append(numeralToAppend);
-                    integer -= entry.getKey();
+                    integer -= currentEntryInt;
                 }
             }
         }
