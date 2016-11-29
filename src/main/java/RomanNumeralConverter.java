@@ -25,18 +25,14 @@ public class RomanNumeralConverter {
             if (currentInt > previousInt) {
                 result -= (previousInt * 2);
             }
-            if (result > 3999) {
-                throw new IllegalArgumentException("Result cannot exceed 3999");
-            }
+            checkIntOutOfBounds(result, "Result cannot exceed 3999");
             previousInt = currentInt;
         }
         return result;
     }
 
     public String toNumeral(int integer) {
-        if (integer > 3999) {
-            throw new IllegalArgumentException("int used for toNumeral(int) cannot exceed 3999");
-        }
+        checkIntOutOfBounds(integer, "int used for toNumeral(int) cannot exceed 3999");
         StringBuilder numeral = new StringBuilder();
 
         while (integer > 0) {
@@ -58,6 +54,12 @@ public class RomanNumeralConverter {
             }
         }
         return new AppendNumeralResult("", currentEntryInt);
+    }
+
+    private void checkIntOutOfBounds(int integer, String errorMessage) {
+        if (integer > 3999) {
+            throw new IllegalArgumentException(errorMessage);
+        }
     }
 
 }
