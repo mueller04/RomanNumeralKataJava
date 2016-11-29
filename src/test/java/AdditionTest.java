@@ -19,4 +19,15 @@ public class AdditionTest {
         assertEquals("II", result);
     }
 
+    @Test
+    public void testIIPlusIIEqualsIV(){
+        String result = calculator.add("II", "II");
+        assertEquals("IV", result);
+    }
+
+    @Test
+    public void testXLVIIPlusCLEqualsCXCIII(){
+        String result = calculator.add("XLVII", "CL");
+        assertEquals("CXCVII", result);
+    }
 }
