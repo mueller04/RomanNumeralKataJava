@@ -34,6 +34,9 @@ public class RomanNumeralConverter {
     }
 
     public String toNumeral(int integer) {
+        if (integer > 3999) {
+            throw new IllegalArgumentException("int used for toNumeral(int) cannot exceed 3999");
+        }
         StringBuilder numeral = new StringBuilder();
 
         while (integer > 0) {

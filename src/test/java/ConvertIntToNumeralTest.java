@@ -2,7 +2,9 @@ package test.java;
 
 import main.java.RomanNumeralConverter;
 import main.java.RomanNumerals;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,6 +12,9 @@ public class ConvertIntToNumeralTest {
 
     RomanNumerals romanNumerals = new RomanNumerals();
     RomanNumeralConverter underTest = new RomanNumeralConverter(romanNumerals);
+
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void testGiven1ReturnsI(){
@@ -123,5 +128,13 @@ public class ConvertIntToNumeralTest {
     public void testGiven3999ReturnsMMMCMXCIX(){
         String result = underTest.toNumeral(3999);
         assertEquals("MMMCMXCIX", result);
+    }
+
+    @Test
+    public void testGivenMMMMThrowsException(){
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage("int used for toNumeral(int) cannot exceed 3999");
+
+        underTest.toNumeral(4000);
     }
 }
