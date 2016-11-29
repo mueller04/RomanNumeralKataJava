@@ -46,4 +46,10 @@ public class ConvertIntToNumeralTest {
         String result = underTest.toNumeral(4);
         assertEquals("IV", result);
     }
+
+    @Test
+    public void testGiven9ReturnsIX(){
+        String result = underTest.toNumeral(9);
+        assertEquals("IX", result);
+    }
 }
