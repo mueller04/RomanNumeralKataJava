@@ -41,9 +41,7 @@ public class RomanNumeralConverter {
                     numeral.append(numeralToAppend);
                     integer -= entry.getKey();
                 }
-
             }
-
         }
         return numeral.toString();
     }
