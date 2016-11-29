@@ -82,4 +82,10 @@ public class ConvertIntToNumeralTest {
         String result = underTest.toNumeral(90);
         assertEquals("XC", result);
     }
+
+    @Test
+    public void testGiven100ReturnsC(){
+        String result = underTest.toNumeral(100);
+        assertEquals("C", result);
+    }
 }
