@@ -1,17 +1,19 @@
 package main.java;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class RomanNumerals {
 
-    private HashMap<Integer, String> intToNumeralMap;
+    private LinkedHashMap<Integer, String> intToNumeralMap;
     private HashMap<String, Integer> numeralToIntMap;
 
 
     public RomanNumerals() {
-        intToNumeralMap = new HashMap<>();
+        intToNumeralMap = new LinkedHashMap<>();
+        intToNumeralMap.put(5, "V");
         intToNumeralMap.put(1, "I");
-        intToNumeralMap.put(2, "II");
+
 
         numeralToIntMap = new HashMap<>();
         numeralToIntMap.put("I", 1);
@@ -23,7 +25,7 @@ public class RomanNumerals {
         numeralToIntMap.put("M", 1000);
     }
 
-    public HashMap<Integer, String> getIntToNumeralMap() {
+    public LinkedHashMap<Integer, String> getIntToNumeralMap() {
         return intToNumeralMap;
     }
 

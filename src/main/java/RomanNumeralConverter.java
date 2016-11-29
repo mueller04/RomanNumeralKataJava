@@ -1,10 +1,11 @@
 package main.java;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class RomanNumeralConverter {
 
-    private Map<Integer, String> integerToNumeralMap;
+    private LinkedHashMap<Integer, String> integerToNumeralMap;
     private Map<String, Integer> numeralToIntegerMap;
 
 
@@ -33,13 +34,18 @@ public class RomanNumeralConverter {
         StringBuilder numeral = new StringBuilder();
 
         while (integer > 0) {
-            if (integer >= 1){
-                numeral.append(integerToNumeralMap.get(1));
-                integer -= 1;
+
+            for (Map.Entry<Integer, String> entry : integerToNumeralMap.entrySet()) {
+                if (integer >= entry.getKey()) {
+                    String numeralToAppend = entry.getValue();
+                    numeral.append(numeralToAppend);
+                    integer -= entry.getKey();
+                }
+
             }
+
         }
         return numeral.toString();
     }
-
 
 }

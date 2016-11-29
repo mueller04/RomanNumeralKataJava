@@ -28,4 +28,10 @@ public class ConvertIntToNumeralTest {
         String result = underTest.toNumeral(3);
         assertEquals("III", result);
     }
+
+    @Test
+    public void testGiven5ReturnsV(){
+        String result = underTest.toNumeral(5);
+        assertEquals("V", result);
+    }
 }
