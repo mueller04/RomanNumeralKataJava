@@ -112,4 +112,16 @@ public class ConvertIntToNumeralTest {
         String result = underTest.toNumeral(1000);
         assertEquals("M", result);
     }
+
+    @Test
+    public void testGiven2000ReturnsM(){
+        String result = underTest.toNumeral(2000);
+        assertEquals("MM", result);
+    }
+
+    @Test
+    public void testGiven3999ReturnsMMMCMXCIX(){
+        String result = underTest.toNumeral(3999);
+        assertEquals("MMMCMXCIX", result);
+    }
 }

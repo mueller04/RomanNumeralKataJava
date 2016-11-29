@@ -34,18 +34,23 @@ public class RomanNumeralConverter {
         StringBuilder numeral = new StringBuilder();
 
         while (integer > 0) {
-
-            for (Map.Entry<Integer, String> entry : integerToNumeralMap.entrySet()) {
-                int currentEntryInt = entry.getKey();
-
-                if (integer >= currentEntryInt) {
-                    String numeralToAppend = entry.getValue();
-                    numeral.append(numeralToAppend);
-                    integer -= currentEntryInt;
-                }
-            }
+            integer = appendNextNumeral(numeral, integer);
         }
         return numeral.toString();
+    }
+
+    private int appendNextNumeral(StringBuilder numeral, int integer) {
+        for (Map.Entry<Integer, String> entry : integerToNumeralMap.entrySet()) {
+            int currentEntryInt = entry.getKey();
+
+            if (integer >= currentEntryInt) {
+                String numeralToAppend = entry.getValue();
+                numeral.append(numeralToAppend);
+                integer -= currentEntryInt;
+                break;
+            }
+        }
+                return integer;
     }
 
 }
