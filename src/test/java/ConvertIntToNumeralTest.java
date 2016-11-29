@@ -70,4 +70,10 @@ public class ConvertIntToNumeralTest {
         String result = underTest.toNumeral(40);
         assertEquals("XL", result);
     }
+
+    @Test
+    public void testGiven50ReturnsL(){
+        String result = underTest.toNumeral(50);
+        assertEquals("L", result);
+    }
 }
