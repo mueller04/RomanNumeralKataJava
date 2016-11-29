@@ -100,4 +100,10 @@ public class ConvertIntToNumeralTest {
         String result = underTest.toNumeral(500);
         assertEquals("D", result);
     }
+
+    @Test
+    public void testGiven900ReturnsCM(){
+        String result = underTest.toNumeral(900);
+        assertEquals("CM", result);
+    }
 }
