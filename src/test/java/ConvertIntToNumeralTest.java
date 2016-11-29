@@ -52,4 +52,10 @@ public class ConvertIntToNumeralTest {
         String result = underTest.toNumeral(9);
         assertEquals("IX", result);
     }
+
+    @Test
+    public void testGiven10ReturnsX(){
+        String result = underTest.toNumeral(10);
+        assertEquals("X", result);
+    }
 }
