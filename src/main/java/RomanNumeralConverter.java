@@ -25,6 +25,9 @@ public class RomanNumeralConverter {
             if (currentInt > previousInt) {
                 result -= (previousInt * 2);
             }
+            if (result > 3999) {
+                throw new IllegalArgumentException("Result cannot exceed 3999");
+            }
             previousInt = currentInt;
         }
         return result;
