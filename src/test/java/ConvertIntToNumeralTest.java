@@ -58,4 +58,16 @@ public class ConvertIntToNumeralTest {
         String result = underTest.toNumeral(10);
         assertEquals("X", result);
     }
+
+    @Test
+    public void testGiven14ReturnsXIV(){
+        String result = underTest.toNumeral(14);
+        assertEquals("XIV", result);
+    }
+
+    @Test
+    public void testGiven40ReturnsXL(){
+        String result = underTest.toNumeral(40);
+        assertEquals("XL", result);
+    }
 }
