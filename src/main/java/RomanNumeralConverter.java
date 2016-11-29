@@ -37,7 +37,7 @@ public class RomanNumeralConverter {
 
             for (Map.Entry<Integer, String> entry : integerToNumeralMap.entrySet()) {
                 int currentEntryInt = entry.getKey();
-                
+
                 if (integer >= currentEntryInt) {
                     String numeralToAppend = entry.getValue();
                     numeral.append(numeralToAppend);

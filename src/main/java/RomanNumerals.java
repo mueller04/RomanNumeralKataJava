@@ -11,6 +11,7 @@ public class RomanNumerals {
 
     public RomanNumerals() {
         intToNumeralMap = new LinkedHashMap<>();
+        intToNumeralMap.put(90, "XC");
         intToNumeralMap.put(50, "L");
         intToNumeralMap.put(40, "XL");
         intToNumeralMap.put(10, "X");
