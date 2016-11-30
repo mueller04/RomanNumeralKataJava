@@ -51,16 +51,15 @@ public class RomanNumeralConverter {
     }
 
     private AppendNumeralResult appendNextNumeral(int integer) {
-        int currentEntryInt = integer;
         for (Map.Entry<Integer, String> entry : integerToNumeralMap.entrySet()) {
-            currentEntryInt = entry.getKey();
+            int currentEntryInt = entry.getKey();
 
             if (integer >= currentEntryInt) {
                 String numeralToAppend = entry.getValue();
                 return new AppendNumeralResult(numeralToAppend, currentEntryInt);
             }
         }
-        return new AppendNumeralResult("", currentEntryInt);
+        return new AppendNumeralResult("", 0);
     }
 
     private void checkIntOutOfBounds(int integer, String errorMessage) {
