@@ -15,4 +15,13 @@ public class Calculator {
         String numeralResult = romanNumeralConverter.toNumeral(additionResult);
         return numeralResult;
     }
+
+    public String subtract(String numeral1Str, String numberal2Str) {
+
+        int integer1 = romanNumeralConverter.toInt(numeral1Str);
+        int integer2 = romanNumeralConverter.toInt(numberal2Str);
+        int additionResult = integer1 - integer2;
+        String numeralResult = romanNumeralConverter.toNumeral(additionResult);
+        return numeralResult;
+    }
 }

@@ -6,6 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ AdditionTest.class,
+        SubtractionTest.class,
         ConvertNumeralToIntTest.class,
         ConvertIntToNumeralTest.class})
 
